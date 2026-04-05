@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>One Piece — Set Sail for the Grand Line</title>
-    <meta name="description" content="An immersive interactive journey through the world of One Piece. Explore the Grand Line, meet the Straw Hat crew, discover Devil Fruits, and uncover legendary treasures.">
+    <meta name="description"
+        content="An immersive interactive journey through the world of One Piece. Explore the Grand Line, meet the Straw Hat crew, discover Devil Fruits, and uncover legendary treasures.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
 
     <!-- GSAP + Plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -17,6 +21,7 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Custom Cursor -->
     <div id="cursor" class="cursor"></div>
@@ -30,34 +35,38 @@
         <div class="loading-content">
             <div class="loading-compass">
                 <svg viewBox="0 0 200 200" class="compass-svg">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke="#d4a853" stroke-width="2" opacity="0.4"/>
-                    <circle cx="100" cy="100" r="70" fill="none" stroke="#d4a853" stroke-width="1" opacity="0.3"/>
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="#d4a853" stroke-width="2" opacity="0.4" />
+                    <circle cx="100" cy="100" r="70" fill="none" stroke="#d4a853" stroke-width="1" opacity="0.3" />
                     <!-- Compass points -->
-                    <polygon points="100,20 95,100 105,100" fill="#c0392b"/>
-                    <polygon points="100,180 95,100 105,100" fill="#d4a853"/>
-                    <polygon points="20,100 100,95 100,105" fill="#d4a853" opacity="0.7"/>
-                    <polygon points="180,100 100,95 100,105" fill="#d4a853" opacity="0.7"/>
+                    <polygon points="100,20 95,100 105,100" fill="#c0392b" />
+                    <polygon points="100,180 95,100 105,100" fill="#d4a853" />
+                    <polygon points="20,100 100,95 100,105" fill="#d4a853" opacity="0.7" />
+                    <polygon points="180,100 100,95 100,105" fill="#d4a853" opacity="0.7" />
                     <!-- N S E W -->
-                    <text x="100" y="15" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cinzel">N</text>
-                    <text x="100" y="195" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cinzel">S</text>
-                    <text x="190" y="104" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cinzel">E</text>
-                    <text x="12" y="104" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cinzel">W</text>
-                    <circle cx="100" cy="100" r="5" fill="#d4a853"/>
+                    <text x="100" y="15" text-anchor="middle" fill="#d4a853" font-size="10"
+                        font-family="Cinzel">N</text>
+                    <text x="100" y="195" text-anchor="middle" fill="#d4a853" font-size="10"
+                        font-family="Cinzel">S</text>
+                    <text x="190" y="104" text-anchor="middle" fill="#d4a853" font-size="10"
+                        font-family="Cinzel">E</text>
+                    <text x="12" y="104" text-anchor="middle" fill="#d4a853" font-size="10"
+                        font-family="Cinzel">W</text>
+                    <circle cx="100" cy="100" r="5" fill="#d4a853" />
                 </svg>
             </div>
             <div class="loading-ship">
                 <svg viewBox="0 0 120 60" class="ship-svg">
                     <!-- Hull -->
-                    <path d="M10,40 Q20,55 60,55 Q100,55 110,40 L100,40 Q90,48 60,48 Q30,48 20,40 Z" fill="#8B4513"/>
+                    <path d="M10,40 Q20,55 60,55 Q100,55 110,40 L100,40 Q90,48 60,48 Q30,48 20,40 Z" fill="#8B4513" />
                     <!-- Mast -->
-                    <line x1="60" y1="8" x2="60" y2="40" stroke="#8B4513" stroke-width="3"/>
+                    <line x1="60" y1="8" x2="60" y2="40" stroke="#8B4513" stroke-width="3" />
                     <!-- Sail -->
-                    <path d="M62,10 Q80,22 62,35" fill="#e8d5a3" stroke="#d4a853" stroke-width="1"/>
+                    <path d="M62,10 Q80,22 62,35" fill="#e8d5a3" stroke="#d4a853" stroke-width="1" />
                     <!-- Jolly Roger on sail -->
-                    <circle cx="68" cy="22" r="4" fill="none" stroke="#333" stroke-width="0.8"/>
-                    <line x1="65" y1="27" x2="71" y2="27" stroke="#333" stroke-width="0.8"/>
+                    <circle cx="68" cy="22" r="4" fill="none" stroke="#333" stroke-width="0.8" />
+                    <line x1="65" y1="27" x2="71" y2="27" stroke="#333" stroke-width="0.8" />
                     <!-- Flag -->
-                    <path d="M60,8 L75,12 L60,16" fill="#c0392b"/>
+                    <path d="M60,8 L75,12 L60,16" fill="#c0392b" />
                 </svg>
             </div>
             <h2 class="loading-text">Charting the Course...</h2>
@@ -67,8 +76,10 @@
         </div>
         <div class="loading-waves">
             <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,60 1440,60 L1440,120 L0,120 Z" fill="rgba(10,22,40,0.6)"/>
-                <path d="M0,80 C360,40 720,100 1080,60 C1260,40 1380,80 1440,80 L1440,120 L0,120 Z" fill="rgba(10,22,40,0.8)"/>
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,60 1440,60 L1440,120 L0,120 Z"
+                    fill="rgba(10,22,40,0.6)" />
+                <path d="M0,80 C360,40 720,100 1080,60 C1260,40 1380,80 1440,80 L1440,120 L0,120 Z"
+                    fill="rgba(10,22,40,0.8)" />
             </svg>
         </div>
     </div>
@@ -76,13 +87,11 @@
     <!-- Audio Toggle -->
     <button id="audio-toggle" class="audio-toggle" aria-label="Toggle audio">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M11 5L6 9H2v6h4l5 4V5z" class="speaker"/>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" class="sound-waves"/>
+            <path d="M11 5L6 9H2v6h4l5 4V5z" class="speaker" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" class="sound-waves" />
         </svg>
     </button>
-    <audio id="ocean-audio" loop preload="none">
-        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=" type="audio/wav">
-    </audio>
+    <audio id="ocean-audio" loop preload="auto" src="Bink_no_sake.mp3"></audio>
 
     <!-- Navigation -->
     <nav id="main-nav" class="main-nav">
@@ -111,18 +120,18 @@
 
         <div class="hero-compass">
             <svg viewBox="0 0 300 300" class="hero-compass-svg">
-                <circle cx="150" cy="150" r="140" fill="none" stroke="#d4a853" stroke-width="1" opacity="0.2"/>
-                <circle cx="150" cy="150" r="120" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.15"/>
-                <circle cx="150" cy="150" r="100" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.1"/>
+                <circle cx="150" cy="150" r="140" fill="none" stroke="#d4a853" stroke-width="1" opacity="0.2" />
+                <circle cx="150" cy="150" r="120" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.15" />
+                <circle cx="150" cy="150" r="100" fill="none" stroke="#d4a853" stroke-width="0.5" opacity="0.1" />
                 <!-- Decorative compass lines -->
-                <line x1="150" y1="10" x2="150" y2="290" stroke="#d4a853" stroke-width="0.3" opacity="0.15"/>
-                <line x1="10" y1="150" x2="290" y2="150" stroke="#d4a853" stroke-width="0.3" opacity="0.15"/>
-                <line x1="40" y1="40" x2="260" y2="260" stroke="#d4a853" stroke-width="0.3" opacity="0.1"/>
-                <line x1="260" y1="40" x2="40" y2="260" stroke="#d4a853" stroke-width="0.3" opacity="0.1"/>
+                <line x1="150" y1="10" x2="150" y2="290" stroke="#d4a853" stroke-width="0.3" opacity="0.15" />
+                <line x1="10" y1="150" x2="290" y2="150" stroke="#d4a853" stroke-width="0.3" opacity="0.15" />
+                <line x1="40" y1="40" x2="260" y2="260" stroke="#d4a853" stroke-width="0.3" opacity="0.1" />
+                <line x1="260" y1="40" x2="40" y2="260" stroke="#d4a853" stroke-width="0.3" opacity="0.1" />
                 <!-- Arrow -->
-                <polygon points="150,15 143,80 157,80" fill="#c0392b" opacity="0.6"/>
-                <polygon points="150,285 143,220 157,220" fill="#d4a853" opacity="0.4"/>
-                <circle cx="150" cy="150" r="6" fill="#d4a853" opacity="0.5"/>
+                <polygon points="150,15 143,80 157,80" fill="#c0392b" opacity="0.6" />
+                <polygon points="150,285 143,220 157,220" fill="#d4a853" opacity="0.4" />
+                <circle cx="150" cy="150" r="6" fill="#d4a853" opacity="0.5" />
             </svg>
         </div>
 
@@ -132,7 +141,8 @@
                 <span class="title-line">Set Sail for</span>
                 <span class="title-line title-accent">the Grand Line</span>
             </h1>
-            <p class="hero-description" id="hero-desc">The sea is vast. Adventure awaits beyond the horizon. Will you answer the call of the ocean and pursue the legendary treasure — One Piece?</p>
+            <p class="hero-description" id="hero-desc">The sea is vast. Adventure awaits beyond the horizon. Will you
+                answer the call of the ocean and pursue the legendary treasure — One Piece?</p>
             <button class="cta-button" id="cta-begin">
                 <span class="cta-text">Begin the Journey</span>
                 <span class="cta-icon">⛵</span>
@@ -143,46 +153,51 @@
         <div class="hero-ship" id="hero-ship">
             <svg viewBox="0 0 200 120" class="hero-ship-svg">
                 <!-- Water line -->
-                <ellipse cx="100" cy="108" rx="80" ry="8" fill="rgba(26,188,156,0.15)"/>
+                <ellipse cx="100" cy="108" rx="80" ry="8" fill="rgba(26,188,156,0.15)" />
                 <!-- Hull -->
-                <path d="M20,80 Q30,105 100,105 Q170,105 180,80 L165,80 Q155,95 100,95 Q45,95 35,80 Z" fill="#6B3410"/>
-                <path d="M25,80 Q35,100 100,100 Q165,100 175,80 L165,80 Q155,93 100,93 Q45,93 35,80 Z" fill="#8B4513"/>
+                <path d="M20,80 Q30,105 100,105 Q170,105 180,80 L165,80 Q155,95 100,95 Q45,95 35,80 Z" fill="#6B3410" />
+                <path d="M25,80 Q35,100 100,100 Q165,100 175,80 L165,80 Q155,93 100,93 Q45,93 35,80 Z" fill="#8B4513" />
                 <!-- Deck details -->
-                <line x1="40" y1="82" x2="160" y2="82" stroke="#A0522D" stroke-width="1"/>
+                <line x1="40" y1="82" x2="160" y2="82" stroke="#A0522D" stroke-width="1" />
                 <!-- Main mast -->
-                <line x1="100" y1="15" x2="100" y2="80" stroke="#6B3410" stroke-width="4"/>
+                <line x1="100" y1="15" x2="100" y2="80" stroke="#6B3410" stroke-width="4" />
                 <!-- Crow's nest -->
-                <rect x="90" y="15" width="20" height="8" rx="2" fill="#6B3410"/>
+                <rect x="90" y="15" width="20" height="8" rx="2" fill="#6B3410" />
                 <!-- Main sail -->
-                <path d="M103,25 Q135,45 103,70" fill="#e8d5a3" stroke="#c4a265" stroke-width="1"/>
+                <path d="M103,25 Q135,45 103,70" fill="#e8d5a3" stroke="#c4a265" stroke-width="1" />
                 <!-- Jolly Roger -->
-                <circle cx="115" cy="47" r="7" fill="none" stroke="#333" stroke-width="1.2"/>
+                <circle cx="115" cy="47" r="7" fill="none" stroke="#333" stroke-width="1.2" />
                 <text x="115" y="50" text-anchor="middle" fill="#333" font-size="8">☠</text>
                 <!-- Front mast -->
-                <line x1="55" y1="35" x2="55" y2="80" stroke="#6B3410" stroke-width="3"/>
+                <line x1="55" y1="35" x2="55" y2="80" stroke="#6B3410" stroke-width="3" />
                 <!-- Front sail -->
-                <path d="M57,38 Q78,52 57,68" fill="#e8d5a3" stroke="#c4a265" stroke-width="0.8"/>
+                <path d="M57,38 Q78,52 57,68" fill="#e8d5a3" stroke="#c4a265" stroke-width="0.8" />
                 <!-- Figurehead -->
-                <circle cx="25" cy="78" r="6" fill="#f5c842"/>
-                <circle cx="24" cy="76" r="1.5" fill="#333"/>
+                <circle cx="25" cy="78" r="6" fill="#f5c842" />
+                <circle cx="24" cy="76" r="1.5" fill="#333" />
                 <!-- Flag -->
-                <path d="M100,15 L120,20 L100,25" fill="#c0392b"/>
+                <path d="M100,15 L120,20 L100,25" fill="#c0392b" />
                 <!-- Ropes -->
-                <line x1="55" y1="35" x2="25" y2="75" stroke="#8B7355" stroke-width="0.5" opacity="0.6"/>
-                <line x1="100" y1="20" x2="170" y2="78" stroke="#8B7355" stroke-width="0.5" opacity="0.6"/>
+                <line x1="55" y1="35" x2="25" y2="75" stroke="#8B7355" stroke-width="0.5" opacity="0.6" />
+                <line x1="100" y1="20" x2="170" y2="78" stroke="#8B7355" stroke-width="0.5" opacity="0.6" />
             </svg>
         </div>
 
         <!-- Animated ocean waves at hero bottom -->
         <div class="hero-ocean-waves">
             <svg class="hero-wave hero-wave-1" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,50 C180,100 360,0 540,50 C720,100 900,0 1080,50 C1260,100 1440,50 1440,50 L1440,100 L0,100 Z" fill="rgba(10,22,40,0.4)"/>
+                <path
+                    d="M0,50 C180,100 360,0 540,50 C720,100 900,0 1080,50 C1260,100 1440,50 1440,50 L1440,100 L0,100 Z"
+                    fill="rgba(10,22,40,0.4)" />
             </svg>
             <svg class="hero-wave hero-wave-2" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,60 C240,20 480,80 720,40 C960,0 1200,60 1440,30 L1440,100 L0,100 Z" fill="rgba(10,22,40,0.6)"/>
+                <path d="M0,60 C240,20 480,80 720,40 C960,0 1200,60 1440,30 L1440,100 L0,100 Z"
+                    fill="rgba(10,22,40,0.6)" />
             </svg>
             <svg class="hero-wave hero-wave-3" viewBox="0 0 1440 100" preserveAspectRatio="none">
-                <path d="M0,70 C200,90 400,50 600,70 C800,90 1000,40 1200,60 C1350,75 1440,65 1440,65 L1440,100 L0,100 Z" fill="rgba(4,10,20,0.9)"/>
+                <path
+                    d="M0,70 C200,90 400,50 600,70 C800,90 1000,40 1200,60 C1350,75 1440,65 1440,65 L1440,100 L0,100 Z"
+                    fill="rgba(4,10,20,0.9)" />
             </svg>
         </div>
 
@@ -190,7 +205,7 @@
             <span>Scroll to Explore</span>
             <div class="scroll-arrow">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#d4a853" stroke-width="2">
-                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                    <path d="M12 5v14M5 12l7 7 7-7" />
                 </svg>
             </div>
         </div>
@@ -204,7 +219,8 @@
             <div class="section-divider">
                 <span class="divider-icon">☠</span>
             </div>
-            <p class="section-subtitle">Ten souls bound by unbreakable bonds, each carrying a dream that will reshape the world.</p>
+            <p class="section-subtitle">Ten souls bound by unbreakable bonds, each carrying a dream that will reshape
+                the world.</p>
         </div>
 
         <div class="crew-grid" id="crew-grid">
@@ -220,7 +236,8 @@
             <div class="section-divider">
                 <span class="divider-icon">🍇</span>
             </div>
-            <p class="section-subtitle">Mystical fruits that grant extraordinary abilities at the cost of the sea's embrace.</p>
+            <p class="section-subtitle">Mystical fruits that grant extraordinary abilities at the cost of the sea's
+                embrace.</p>
         </div>
 
         <div class="fruits-container" id="fruits-container">
@@ -239,8 +256,9 @@
     <!-- Wave divider -->
     <div class="wave-divider">
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-            <path d="M0,30 C360,60 720,0 1080,30 C1260,55 1380,25 1440,35 L1440,60 L0,60 Z" fill="#0a1628"/>
-            <path d="M0,40 C360,15 720,55 1080,35 C1260,20 1380,45 1440,40 L1440,60 L0,60 Z" fill="#0a0f1f" opacity="0.5"/>
+            <path d="M0,30 C360,60 720,0 1080,30 C1260,55 1380,25 1440,35 L1440,60 L0,60 Z" fill="#0a1628" />
+            <path d="M0,40 C360,15 720,55 1080,35 C1260,20 1380,45 1440,40 L1440,60 L0,60 Z" fill="#0a0f1f"
+                opacity="0.5" />
         </svg>
     </div>
 
@@ -252,7 +270,8 @@
             <div class="section-divider">
                 <span class="divider-icon">🗺️</span>
             </div>
-            <p class="section-subtitle">Follow the Straw Hats across the seas — every arc a new adventure, every island a new challenge.</p>
+            <p class="section-subtitle">Follow the Straw Hats across the seas — every arc a new adventure, every island
+                a new challenge.</p>
         </div>
 
         <div class="timeline-path" id="timeline-path">
@@ -271,7 +290,8 @@
             <div class="section-divider">
                 <span class="divider-icon">🧭</span>
             </div>
-            <p class="section-subtitle">Navigate through the most treacherous waters in the world. Each location holds its own mysteries.</p>
+            <p class="section-subtitle">Navigate through the most treacherous waters in the world. Each location holds
+                its own mysteries.</p>
         </div>
 
         <div class="map-container" id="map-container">
@@ -303,7 +323,7 @@
     <!-- Wave divider -->
     <div class="wave-divider wave-divider-gold">
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-            <path d="M0,25 C240,50 480,10 720,35 C960,55 1200,15 1440,30 L1440,60 L0,60 Z" fill="#040a14"/>
+            <path d="M0,25 C240,50 480,10 720,35 C960,55 1200,15 1440,30 L1440,60 L0,60 Z" fill="#040a14" />
         </svg>
     </div>
 
@@ -316,24 +336,28 @@
             <div class="treasure-chest" id="treasure-chest">
                 <svg viewBox="0 0 200 160" class="chest-svg">
                     <!-- Chest base -->
-                    <rect x="30" y="80" width="140" height="70" rx="5" fill="#6B3410" stroke="#8B4513" stroke-width="2"/>
+                    <rect x="30" y="80" width="140" height="70" rx="5" fill="#6B3410" stroke="#8B4513"
+                        stroke-width="2" />
                     <!-- Metal bands -->
-                    <rect x="30" y="90" width="140" height="6" fill="#d4a853" opacity="0.6"/>
-                    <rect x="30" y="130" width="140" height="6" fill="#d4a853" opacity="0.6"/>
+                    <rect x="30" y="90" width="140" height="6" fill="#d4a853" opacity="0.6" />
+                    <rect x="30" y="130" width="140" height="6" fill="#d4a853" opacity="0.6" />
                     <!-- Lock -->
-                    <circle cx="100" cy="110" r="10" fill="#d4a853" stroke="#b8941f" stroke-width="2"/>
-                    <rect x="96" y="108" width="8" height="12" rx="1" fill="#6B3410"/>
+                    <circle cx="100" cy="110" r="10" fill="#d4a853" stroke="#b8941f" stroke-width="2" />
+                    <rect x="96" y="108" width="8" height="12" rx="1" fill="#6B3410" />
                     <!-- Chest lid -->
-                    <path d="M30,80 Q30,40 100,35 Q170,40 170,80 Z" fill="#8B4513" stroke="#6B3410" stroke-width="2" class="chest-lid"/>
+                    <path d="M30,80 Q30,40 100,35 Q170,40 170,80 Z" fill="#8B4513" stroke="#6B3410" stroke-width="2"
+                        class="chest-lid" />
                     <!-- Lid metal band -->
-                    <path d="M45,75 Q45,50 100,46 Q155,50 155,75" fill="none" stroke="#d4a853" stroke-width="3" opacity="0.6"/>
+                    <path d="M45,75 Q45,50 100,46 Q155,50 155,75" fill="none" stroke="#d4a853" stroke-width="3"
+                        opacity="0.6" />
                     <!-- Glow from inside (hidden initially) -->
-                    <ellipse cx="100" cy="78" rx="50" ry="5" fill="#f5c842" opacity="0" class="chest-glow"/>
+                    <ellipse cx="100" cy="78" rx="50" ry="5" fill="#f5c842" opacity="0" class="chest-glow" />
                 </svg>
             </div>
 
             <h2 class="treasure-title" id="treasure-title">The Journey Never Ends</h2>
-            <p class="treasure-desc" id="treasure-desc">The true treasure was the adventure shared with nakama along the way. But there's always another horizon to chase.</p>
+            <p class="treasure-desc" id="treasure-desc">The true treasure was the adventure shared with nakama along the
+                way. But there's always another horizon to chase.</p>
 
             <button class="cta-button treasure-cta" id="cta-join">
                 <span class="cta-text">Join the Crew</span>
@@ -347,7 +371,7 @@
     <footer class="site-footer">
         <div class="footer-waves">
             <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="rgba(6,13,26,0.8)"/>
+                <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill="rgba(6,13,26,0.8)" />
             </svg>
         </div>
         <div class="footer-content">
@@ -366,4 +390,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
